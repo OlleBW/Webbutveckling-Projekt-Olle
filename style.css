@@ -1,13 +1,16 @@
-.donut-btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
-}
 .header {
-    height: auto;
-    width: 75%;
-    margin-left: 12%;
-    font-size:larger;
-    text-align: center;
+  height: auto;
+  width: 75%;
+  margin-left: 12%;
+  font-size: larger;
+  text-align: center;
+}
+.donut-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+.upgrades {
+    
 }
