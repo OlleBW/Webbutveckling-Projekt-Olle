@@ -8,7 +8,6 @@ label2.addEventListener()
 
 function handleclick(){
     click += 1;
-    label.innerHTML = 
 }
 
 const donutButton = document.querySelector("#donut-action")
