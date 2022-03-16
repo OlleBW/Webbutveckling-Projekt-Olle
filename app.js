@@ -1,38 +1,42 @@
-let click = 0;
+let donuts = 0;
 let clickPower = 1;
 let clickPowerCost = 10;
+let pwrBtn = document.querySelector(".clickPowerup")
 let autoClickerCost = 10;
+let autoBtn = document.querySelector(".autoClicker")
 
 let button = document.querySelector(".donut-btn");
 let div = document.querySelector(".points");
 button.addEventListener("click", handleClick);
 function handleClick() {
-  click += clickPower;
-  div.innerHTML = click;
+  donuts += clickPower;
+  div.innerHTML = donuts;
 }
 
 let button1 = document.querySelector(".autoClicker");
 button1.addEventListener("click", donutTimer);
 function donutTimer() {
-  if (click >= autoClickerCost) {
-    click -= autoClickerCost;
-    div.innerHTML = click;
+  if (donuts >= autoClickerCost) {
+    donuts -= autoClickerCost;
+    div.innerHTML = donuts;
     autoClickerCost = autoClickerCost*2;
-    autoClicker.innerHTML = "Auto-Clicker (Cost: 10)"
+    autoBtn.innerHTML = `Auto-Clicker (Cost: ${autoClickerCost})`
     setInterval(giveAutoclick, 500);
   }
 }
 function giveAutoclick() {
-  click++;
-  div.innerHTML = click;
+  donuts++;
+  div.innerHTML = donuts;
 }
 
 let button2 = document.querySelector(".clickPowerup");
 button2.addEventListener("click", pwrUp);
 function pwrUp() {
-  if(click >= clickPowerCost){
+  if(donuts >= clickPowerCost){
     clickPower += 2;
-    click -= clickPowerCost;
-    div.innerHTML = click;
+    donuts -= clickPowerCost;
+    div.innerHTML = donuts;
+    clickPowerCost = clickPowerCost*3;
+    pwrBtn.innerHTML = `Click-Powerup (Cost: ${clickPowerCost})`
   }
 }
