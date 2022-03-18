@@ -1,5 +1,9 @@
+.contents {
+  background-color: red;
+  margin-left: 25%;
+  width: 50%;
+}
 .header {
-  height: 25%;
   margin-left: 35%;
   margin-right: 35%;
   font-size: larger;
@@ -9,12 +13,19 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 75%;
 }
 .upgrades {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 35%;
-    margin-right: 35%;
-    gap: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
+}
+body {
+  background-color: black;
+  background-image: url(bg.png);
+  background-size: 100% 700%;
+}
+.Info {
+  display: flex;
+  justify-content: center;
 }
